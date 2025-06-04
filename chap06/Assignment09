@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int get_red(int r) {
+    return 255 - r;
+}
+
+int get_green(int g) {
+    return 255 - g;
+}
+
+int get_blue(int b) {
+    return 255 - b;
+}
+
+void make_rgb(unsigned int color, int *r, int *g, int *b) {
+    *r = (color >> 16) & 0xFF;
+    *g = (color >> 8) & 0xFF;
+    *b = color & 0xFF;
+}
+
+int main() {
+    unsigned int color;
+    int r, g, b, comp_r, comp_g, comp_b;
+
+    while (1) {
+        printf("RGB 색상(16진수, 예: 0xFF0080)을 입력하세요 (종료: 0x000000): ");
+        scanf("%x", &color);
+
+        if (color == 0x000000) {
+            printf("프로그램 종료\n");
+            break;
+        }
+
+        make_rgb(color, &r, &g, &b);
+
+        comp_r = get_red(r);
+        comp_g = get_green(g);
+        comp_b = get_blue(b);
+
+        printf("보색은 %02X%02X%02X입니다.\n", comp_r, comp_g, comp_b);
+    }
+
+    return 0;
+}
