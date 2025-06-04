@@ -1,0 +1,26 @@
+/*파일명: main.c
+*내용: 몸무게를 입력받아서 출력하는 프로그램
+*작성자: 전기준
+*날짜: 2025.04.09.
+*버전: v1.0
+*/
+
+#include <stdio.h>
+
+float weight(){
+    float w;
+
+    printf("몸무게? ");
+    scanf("%f", &w);
+
+    printf("입력한 몸무게는 %.2fKG입니다.", w);
+
+    return 0.0;
+}
+
+int main(){
+
+    weight();
+
+    return 0;
+}
