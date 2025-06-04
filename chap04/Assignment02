@@ -1,0 +1,29 @@
+/*파일명: main.c
+*내용: 화씨온도를 실수로 입력받아 섭씨온도로 변환 후 출력하는 프로그램
+*작성자: 전기준
+*날짜: 2025.04.12.
+*버전: v1.0
+*/
+
+#include <stdio.h>
+float Fahrenheit(){
+    float F, C;
+
+    printf("화씨온도? ");
+    scanf("%f", &F);
+
+//섭씨 온도 = (화씨 온도 - 32) * 5/9
+    C = (F - 32) * 5.0/9.0;
+
+    printf("%.2f F = %.2f C", F, C);
+
+}
+
+
+int main(){
+
+    Fahrenheit();
+
+    return 0;
+}
+
