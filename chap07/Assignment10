@@ -1,0 +1,60 @@
+/*파일명: as10.c
+*내용: 2차원 배열을 활용해 3 * 3 행렬의 합을 구하는 프로그램
+*작성자: 전기준
+*날짜: 2025.05.29.
+*버전: v1.0
+*/
+#include <stdio.h>
+
+void arr();
+
+int main(){
+
+    arr();
+
+    return 0;
+}
+
+void arr(){
+
+    int a[3][3];
+    int b[3][3];
+    int c[3][3];
+
+    int k = 1;
+
+    printf("x 행렬: \n");
+
+    for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 3; j++){
+            a[i][j] = 10 * k;
+            printf("%d ", a[i][j]);
+            k++;
+        }
+        printf("\n");
+    }
+
+    k = 9;
+
+    printf("y 행렬: \n");
+
+    for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 3; j++){
+            b[i][j] = k;
+            printf("%d ", b[i][j]);
+            k--;
+        }
+        printf("\n");
+    }
+
+    printf("x + y 행렬: \n");
+
+    for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 3; j++){
+            c[i][j] = a[i][j] + b[i][j];
+            printf("%d ", c[i][j]);
+        }
+        printf("\n");
+    }
+
+}
