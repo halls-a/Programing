@@ -1,0 +1,44 @@
+/*파일명: main.c
+*내용: 메뉴를 선택하고, 그에 해당하는 답을 출력하는 프로그램
+*작성자: 전기준
+*날짜: 2025.05.20.
+*버전: v1.0
+*/
+#include <stdio.h>
+
+void choose_menu(int choice) {
+    switch (choice) {
+        case 0:
+            printf("종료\n");
+            break;
+        case 1:
+            printf("파일 열기를 수행합니다.\n");
+            break;
+        case 2:
+            printf("파일 저장을 수행합니다.\n");
+            break;
+        case 3:
+            printf("인쇄를 수행합니다.\n");
+            break;
+        default:
+            printf("잘못된 입력\n");
+            break;
+    }
+}
+
+int main() {
+    int choice;
+
+    while (1) {
+        printf("[1. 파일 열기, 2. 파일 저장, 3. 인쇄 0. 종료] 선택? ");
+        scanf("%d", &choice);
+        
+        choose_menu(choice);
+        
+        if (choice == 0) {
+            break;
+        }
+    }
+
+    return 0;
+}
