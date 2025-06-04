@@ -1,0 +1,29 @@
+/*파일명: main.c
+*내용: 인자로 전달된 정수의 약수를 구해서 출력하는 프로그램
+*작성자: 전기준
+*날짜: 2025.05.20.
+*버전: v1.0
+*/
+#include <stdio.h>
+
+void divisors(int n) {
+    printf("%d의 약수: ", n);
+    for (int i = 1; i <= n; i++) {
+        if (n % i == 0) {
+            printf("%d ", i);
+            
+        }
+    }
+    printf("\n");
+}
+
+int main() {
+    int num1, num2, num3;
+
+    scanf("%d %d %d", &num1, &num2, &num3);
+    divisors(num1);
+    divisors(num2);
+    divisors(num3);
+
+    return 0;
+}
