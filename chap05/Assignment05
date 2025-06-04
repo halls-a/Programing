@@ -1,0 +1,22 @@
+//온도를 입력받아 섭씨온도는 화씨온도로, 화씨온도는 섭씨온도로 변환하는 프로그램
+
+#include <stdio.h>
+
+float a(){
+    float tem, sup, hwa;
+
+    printf("온도? ");
+    scanf("%f", &tem);
+
+    if(){
+        
+    }
+
+
+    return 0.0;
+}
+
+int main(){
+
+    return 0;
+}
