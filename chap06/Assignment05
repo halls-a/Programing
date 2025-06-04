@@ -1,0 +1,36 @@
+/*파일명: main.c
+*내용: 전달받은 정수가 짝수인지 홀수인지 검사하는 프로그램
+*작성자: 전기준
+*날짜: 2025.05.20.
+*버전: v1.0
+*/
+#include <stdio.h>
+
+int is_even(int n) {
+    return n % 2 == 0;
+}
+
+int is_odd(int n) {
+    return n % 2 != 0;
+}
+
+int main() {
+    int a, x = 0, y = 0;
+
+    printf("수를 입력: ");
+    while (1) {
+        scanf("%d", &a);
+        if (a == 0) {
+            break;
+        }
+        if (is_even(a)) {
+            x++;
+        }
+        if (is_odd(a)) {
+            y++;
+        }
+    }
+    printf("짝수 %d개, 홀수 %d개입니다.\n", x, y);
+
+    return 0;
+}
