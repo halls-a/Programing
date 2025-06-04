@@ -1,0 +1,29 @@
+/*파일명: main.c
+*내용: 원주율 파이 값을 여러가지 방법으로 출력하는 프로그램
+*작성자: 전기준
+*날짜: 2025.04.09.
+*버전: v1.0
+*/
+
+#include <stdio.h>
+//#define pi = 3.14159265
+
+float Pi(){
+
+double pi = 3.14159265;
+
+printf("pi = %.2f\n", pi);
+printf("pi = %.4f\n", pi);
+printf("pi = %.6f\n", pi);
+printf("pi = %.8f\n", pi);
+printf("pi = %e\n", pi);
+
+
+}
+
+int main(){
+
+    Pi();
+
+    return 0;
+}
