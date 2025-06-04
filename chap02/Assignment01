@@ -1,0 +1,20 @@
+/*파일명: main.c
+*내용: 특정 프로그램을 터미널에 출력하는 프로그램
+*작성자: 전기준
+*날짜: 2025.04.09.
+*버전: v1.0
+*/
+
+#include <stdio.h>
+
+void print(){
+    printf("int main(void)\n{\n    return 0;\n}");
+
+    return;
+}
+
+int main(){
+    print();
+
+    return 0;
+}
