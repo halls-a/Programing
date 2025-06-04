@@ -1,0 +1,33 @@
+/*파일명: as09.c
+*내용: 요금을 배열의 원소로 저장하고, 저장된 값 2000 당 *을 출력하는 프로그램
+*작성자: 전기준
+*날짜: 2025.05.29.
+*버전: v1.0
+*/
+
+#include <stdio.h>
+void fee();
+
+int main(){
+
+    fee();
+
+    return 0;
+}
+
+void fee(){
+
+    int arr[3] = {36000, 42000, 38000};
+    int fee;
+    char s = '*';
+
+    for(int i = 0; i < 3; i++){
+        fee = arr[i] / 2000;
+        printf("%d월 %d:%s", i+1, arr[i]);
+        for(int j = 0; j < fee; j++){
+            printf("%c", s);
+        }
+        printf("\n");
+    }
+
+}
