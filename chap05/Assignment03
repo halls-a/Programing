@@ -1,0 +1,76 @@
+/*파일명: main.c
+*내용: 거스름돈의 금액을 입력받아 오만원, 만원, 천원, 백원, 십원짜리가 
+      각각 몇 개 필요한지 구해서 출력하는 프로그램
+*작성자: 전기준
+*날짜: 2025.04.22.
+*버전: v1.0
+*/
+
+#include <stdio.h>
+
+int Assignment0503(){
+
+    int How_much, How_much_a, How_much_b, How_much_c, How_much_d, How_much_e, How_much_f, a, b, c, d, e, f;
+
+    How_much = 0;
+
+    printf("거스름돈? ");
+    scanf("%d", &How_much);
+
+    How_much = (How_much / 10) * 10;
+
+    printf("거스름돈 (10원미만 절사): %d\n", How_much);
+
+    if(How_much > 50000){
+
+        a = How_much / 50000;
+        How_much_a = How_much % 50000;
+
+        if(How_much_a > 10000){
+
+        b = How_much_a / 10000;
+        How_much_b = How_much_a % 10000;
+
+        if(How_much_b > 5000){
+
+        c = How_much_b / 5000;
+        How_much_c = How_much_b % 5000;
+
+        if(How_much_c > 1000){
+
+        d = How_much_c / 1000;
+        How_much_d = How_much_c % 1000;
+
+        if(How_much_d > 100){
+
+        e = How_much_d / 100;
+        How_much_e = How_much_d % 100;
+
+        if(How_much_f > 10){
+        f = How_much_e / 10;
+        How_much_f = How_much_e % 10;
+
+        }
+        }
+        }
+        }
+        }
+    }
+
+    printf("50000원 %d장\n", a);
+    printf("10000원 %d장\n", b);
+    printf("5000원 %d장\n", c);
+    printf("1000원 %d장\n", d);
+    printf("100원 %d개\n", e);
+    printf("10원 %d개\n", f);
+
+
+    return 0;
+}
+
+
+int main(){
+    Assignment0503();
+
+    return 0;
+}
