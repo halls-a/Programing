@@ -1,0 +1,32 @@
+
+#include <stdio.h>
+#define ARR_SIZE 5
+
+void DC();
+
+int main(){
+
+    DC();
+
+    return 0;
+}
+
+void DC(){
+
+    int price[ARR_SIZE];
+    int dc, count, num= 0;
+
+    printf("상품가 %d개를 입력하세요:\n", ARR_SIZE);
+
+    for (; count < ARR_SIZE && scanf("%d", &num) == 1; count++) {
+        price[count] = num;
+    }
+
+    printf("할인율? ");
+    scanf("%d", &dc);
+
+    for(int i = 0; i < sizeof(price) / sizeof(price[0]); i++){
+        printf("가격: %d --> 할인가: %d\n", price[i], price[i] * ( 100 - dc ) / 100);
+    }
+    
+}
