@@ -1,0 +1,35 @@
+/*파일명: main.c
+*내용: 7번째, 15번째, 23번째, 31비트만 1인 값을 구해서 
+16진수와 10진수로 출력하는 프로그램
+*작성자: 전기준
+*날짜: 2025.04.19.
+*버전: v1.0
+*/
+
+#include <stdio.h>
+
+void a() {
+
+    unsigned int bit7 = 0;
+    unsigned int bit15 = 0;
+    unsigned int bit23 = 0;
+    unsigned int bit31 = 0;
+
+
+    bit7 = 1 << 7;
+    bit15 = 1 << 15;
+    bit23 = 1 << 23;
+    bit31 = 1 << 31;
+
+    printf("7번비트:  %08X %u\n", bit7, bit7);
+    printf("15번비트: %08X %u\n", bit15, bit15);
+    printf("23번비트: %08X %u\n", bit23, bit23);
+    printf("31번비트: %08X %u\n", bit31, bit31);
+}
+
+int main(){
+
+    a();
+
+    return 0;
+}
