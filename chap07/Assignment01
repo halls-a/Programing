@@ -1,0 +1,48 @@
+/*파일명: as01.c
+*내용: 첫 항과 공차에 대한 값을 입력받아 배열을 채우고 출력하는 프로그램
+*작성자: 전기준
+*날짜: 2025.05.28.
+*버전: v1.0
+*/
+#include <stdio.h>
+#define ARR_SIZE 15
+
+int input();
+void output(int a, int b);
+
+int main(){
+
+    input();
+
+    return 0;
+}
+
+//입력하는 함수
+int input(){
+    int a, d;
+
+    printf("첫 번째 항? ");
+    scanf("%d", &a);
+
+    printf("공차? ");
+    scanf("%d", &d);
+
+    output(a, d);
+
+    return 0;
+}
+
+//출력하는 함수
+void output(int a, int d){
+
+    int arr[ARR_SIZE];
+
+    printf("등차수열: ");
+
+    for(int i = 0; i < (sizeof(arr) / sizeof(arr[0])); i++){
+        arr[i] = a + (d * i);
+
+        printf("%d ", arr[i]);
+    }
+
+}
