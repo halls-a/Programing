@@ -1,0 +1,38 @@
+/*파일명: main.c
+*내용: 두 점 사이의 직선 거리를 구하는 프로그램
+*작성자: 전기준
+*날짜: 2025.05.20.
+*버전: v1.0
+*/
+#include <stdio.h>
+#include <math.h>
+
+double distance();
+
+int main(){
+
+    int x1, y1, x2, y2;
+
+    printf("직선의 시작점 좌표? ");
+    scanf("%d %d", &x1, &y1);
+
+    printf("직선의 끝점 좌표? ");
+    scanf("%d %d", &x2, &y2);
+
+    float r = distance(x1, y1, x2, y2);
+
+    printf("(%d, %d)~(%d %d) 직선의 길이: %f", x1, y1, x2, y2, r);
+
+
+    return 0;
+}
+
+double distance(int a, int b, int c, int d){
+
+    double num;
+    num = (c - a)*(c - a) + (d - b)*(d - b);
+    double result = sqrt(num);
+
+
+    return result;
+}
