@@ -1,0 +1,30 @@
+/*파일명: main.c
+*내용: 정수를 8,10,16진수 중 하나로 입력받아 각각 얼마에 해당하는지 되레 출력하는 프로그램
+*작성자: 전기준
+*날짜: 2025.04.09.
+*버전: v1.0
+*/
+
+#include <stdio.h>
+
+int NUM(){
+    char num;
+
+    printf("8진수로 입력하려면 012, 16진수로 입력하려면 0x12처럼 입력하세요.\n");
+    printf("정수? ");
+    scanf("%i", &num);
+
+    printf("8진수: %#o\n", num);
+    printf("10진수: %d\n", num);
+    printf("16진수: %#x\n", num);
+
+    return 0;
+    
+}
+
+int main(){
+
+    NUM();
+
+    return 0;
+}
