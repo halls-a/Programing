@@ -1,0 +1,28 @@
+/*파일명: main.c
+*내용: 직사각형의 가로와 세로의 길이를 입력받아 둘레를 출력하는 프로그램
+*작성자: 전기준
+*날짜: 2025.05.20.
+*버전: v1.0
+*/
+#include <stdio.h>
+
+int get_perimeter(int a, int b);
+
+int main(){
+
+    int x, y;
+    printf("가로와 세로를 입력하세요: ");
+    scanf("%d %d", &x, &y);
+    int perimeter = get_perimeter(x, y);
+    printf("직사각형의 둘레는 %d입니다.", perimeter);
+
+    return 0;
+}
+
+int get_perimeter(int a, int b){
+
+    printf("가로: %d\n", a);
+    printf("세로: %d\n", b);
+
+    return (a + b) * 2;
+}
