@@ -1,0 +1,30 @@
+/*파일명: main.c
+*내용: 반지름의 길이를 입력받아 구의 부피를 구하는 프로그램 
+*작성자: 전기준
+*날짜: 2025.04.12.
+*버전: v1.0
+*/
+
+#include <stdio.h>
+#include <math.h>
+
+void sphere(){
+    float r, Pi, V;
+
+    Pi = 3.141592;
+
+    printf("반지름의 길이? ");
+    scanf("%f", &r);
+
+    V = 4.0/3.0 * Pi * r * r * r;
+
+    printf("구의 부피: %.6f", V);
+}
+
+
+int main(){
+
+    sphere();
+
+    return 0;
+}
